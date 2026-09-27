@@ -7,9 +7,9 @@ app_name = "blog"
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("post/<int:pk>/", PostDetailView.as_view(), name="post-detail"),
+    path("posts/<int:pk>/", PostDetailView.as_view(), name="post-detail"),
     path(
-        "post/<int:pk>/comments/",
+        "posts/<int:pk>/comments/",
         CommentaryCreateView.as_view(),
         name="comment-create"
     )
